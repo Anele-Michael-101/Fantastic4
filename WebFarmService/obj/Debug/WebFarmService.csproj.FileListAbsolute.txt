@@ -1,0 +1,7 @@
+C:\Users\Phora\source\Repos\WebFarmService\bin\WebFarmService.dll.config
+C:\Users\Phora\source\Repos\WebFarmService\bin\WebFarmService.dll
+C:\Users\Phora\source\Repos\WebFarmService\bin\WebFarmService.pdb
+C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.csproj.AssemblyReference.cache
+C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.csproj.CoreCompileInputs.cache
+C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.dll
+C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.pdb
