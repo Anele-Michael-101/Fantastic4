@@ -13,6 +13,9 @@ namespace WebFarm_Backend
     public class Service1 : IService1
     {
         int balls = 2;
+
+        int TK_testing =5;
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);
