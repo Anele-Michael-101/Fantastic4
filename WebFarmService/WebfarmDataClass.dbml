@@ -1,1 +1,59 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="WebFarmDatabase" Class="WebfarmDataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\WebFarmDatabase.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WebFarmDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BUSINESS" Member="BUSINESSes">
+    <Type Name="BUSINESS">
+      <Column Name="U_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="B_CITY" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="B_ADDRESS" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="B_LICENCE" Type="System.String" DbType="VarChar(35) NOT NULL" CanBeNull="false" />
+      <Column Name="B_TAXNO" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Association Name="BUSINESS_INVOICE" Member="INVOICEs" ThisKey="U_ID" OtherKey="B_ID" Type="INVOICE" />
+      <Association Name="USER_BUSINESS" Member="USER" ThisKey="U_ID" OtherKey="U_ID" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FARMER" Member="FARMERs">
+    <Type Name="FARMER">
+      <Column Name="U_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="F_CERTIFICATION" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="F_SPECIALITY" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="F_EXPERIENCE" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="F_RATING" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="FARMER_INVOICE" Member="INVOICEs" ThisKey="U_ID" OtherKey="F_ID" Type="INVOICE" />
+      <Association Name="USER_FARMER" Member="USER" ThisKey="U_ID" OtherKey="U_ID" Type="USER" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[USER]" Member="USERs">
+    <Type Name="USER">
+      <Column Name="U_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="U_NAN" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="U_Surname" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="U_Email" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="U_ContactNo" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="U_Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="USER_BUSINESS" Member="BUSINESS" ThisKey="U_ID" OtherKey="U_ID" Type="BUSINESS" Cardinality="One" />
+      <Association Name="USER_FARMER" Member="FARMER" ThisKey="U_ID" OtherKey="U_ID" Type="FARMER" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT" Member="PRODUCTs">
+    <Type Name="PRODUCT">
+      <Column Name="P_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="P_NAME" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="P_PRICE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="P_WHOLESALEPRICE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="P_QUANTITY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVOICE" Member="INVOICEs">
+    <Type Name="INVOICE">
+      <Column Name="Inv_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Inv_Number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Inv_DateCreated" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Inv_DueDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Inv_TotAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="F_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="B_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="BUSINESS_INVOICE" Member="BUSINESS" ThisKey="B_ID" OtherKey="U_ID" Type="BUSINESS" IsForeignKey="true" />
+      <Association Name="FARMER_INVOICE" Member="FARMER" ThisKey="F_ID" OtherKey="U_ID" Type="FARMER" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
