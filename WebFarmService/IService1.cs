@@ -15,7 +15,7 @@ namespace WebFarmService
 
         [OperationContract]
         string GetData(int value);
-
+        int Login(String username, string password);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
