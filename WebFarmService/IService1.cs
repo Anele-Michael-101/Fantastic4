@@ -19,7 +19,7 @@ namespace WebFarmService
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
-        int Mike = 2;
+        
         // TODO: Add your service operations here
     }
 
