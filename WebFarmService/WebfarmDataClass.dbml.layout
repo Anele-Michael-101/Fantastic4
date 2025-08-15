@@ -1,1 +1,64 @@
-﻿
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="WebfarmDataClass">
+  <DataContextMoniker Name="/WebfarmDataClassDataContext" />
+  <nestedChildShapes>
+    <classShape Id="347258ba-60c5-4cde-8003-cd4ec8e0b0b1" absoluteBounds="0.5, 3, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/WebfarmDataClassDataContext/BUSINESS" />
+      <nestedChildShapes>
+        <elementListCompartment Id="72d1a2da-e85a-4bb7-a005-7581f9de3dfa" absoluteBounds="0.51500000000000012, 3.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9ad362c-56a5-4ce9-ad20-b9221ea912fc" absoluteBounds="4.25, 2.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/WebfarmDataClassDataContext/FARMER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="06b3c507-9ac3-4944-ae8f-480673a004bc" absoluteBounds="4.2650000000000006, 2.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93c85236-8a86-42d2-8f71-8efb07151400" absoluteBounds="2, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/WebfarmDataClassDataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="86c107d7-a815-42b9-9c7e-a6e2c72f5288" absoluteBounds="2.015, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.25 : 2.4631982421875); (2.25 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebfarmDataClassDataContext/USER/USER_BUSINESS" />
+      <nodes>
+        <classShapeMoniker Id="93c85236-8a86-42d2-8f71-8efb07151400" />
+        <classShapeMoniker Id="347258ba-60c5-4cde-8003-cd4ec8e0b0b1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.2500005 : 2.4631982421875); (3.2500005 : 3.17954802604167); (4.25 : 3.17954802604167)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebfarmDataClassDataContext/USER/USER_FARMER" />
+      <nodes>
+        <classShapeMoniker Id="93c85236-8a86-42d2-8f71-8efb07151400" />
+        <classShapeMoniker Id="e9ad362c-56a5-4ce9-ad20-b9221ea912fc" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1c7ec1fc-52f9-4b96-8de2-1a6b1d48dd4a" absoluteBounds="2.625, 4.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/WebfarmDataClassDataContext/PRODUCT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b27eaa97-fc79-492a-a1b1-2578088784a3" absoluteBounds="2.64, 5.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d29b7812-8090-4d1d-ae07-8ff9df2e4fb3" absoluteBounds="5.25, 4.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/WebfarmDataClassDataContext/INVOICE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a29a3680-a1f5-47e1-b83f-5a59d40c7295" absoluteBounds="5.265, 4.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 4.22919790494792); (5.66666666666667 : 4.22919790494792 : JumpStart); (5.83333333333333 : 4.22919790494792 : JumpEnd); (6.78125 : 4.22919790494792); (6.78125 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebfarmDataClassDataContext/BUSINESS/BUSINESS_INVOICE" />
+      <nodes>
+        <classShapeMoniker Id="347258ba-60c5-4cde-8003-cd4ec8e0b0b1" />
+        <classShapeMoniker Id="d29b7812-8090-4d1d-ae07-8ff9df2e4fb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 3.89589680989583); (5.75 : 4.5)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/WebfarmDataClassDataContext/FARMER/FARMER_INVOICE" />
+      <nodes>
+        <classShapeMoniker Id="e9ad362c-56a5-4ce9-ad20-b9221ea912fc" />
+        <classShapeMoniker Id="d29b7812-8090-4d1d-ae07-8ff9df2e4fb3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

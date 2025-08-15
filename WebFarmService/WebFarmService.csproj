@@ -96,9 +96,9 @@
       <LastGenOutput>WebfarmDataClass.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="WebfarmDataClass.dbml.layout">
+    <None Include="WebfarmDataClass.dbml.layout">
       <DependentUpon>WebfarmDataClass.dbml</DependentUpon>
-    </Content>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
