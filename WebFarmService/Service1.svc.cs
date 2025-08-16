@@ -22,9 +22,9 @@ namespace WebFarmService
                       where u.U_Email.Equals(email) && u.U_Password.Equals(password)
                       select u).FirstOrDefault();
 
-            int ID = User.U_ID;
-            if (ID > 0) {
-                return ID;
+            
+            if (User !=null) {
+                return User.U_ID;
             }else {
                 return -1; 
             }
