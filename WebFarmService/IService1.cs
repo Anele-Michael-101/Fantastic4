@@ -14,8 +14,8 @@ namespace WebFarmService
     {
 
         [OperationContract]
-       
         int Login(String email, string password);
+
         [OperationContract]
         Boolean Register(String Name,String Surname,String email,String password,String contact);
        
