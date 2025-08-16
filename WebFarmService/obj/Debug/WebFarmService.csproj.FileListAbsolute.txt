@@ -5,3 +5,10 @@ C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.csproj.Assem
 C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.csproj.CoreCompileInputs.cache
 C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.dll
 C:\Users\Phora\source\Repos\WebFarmService\obj\Debug\WebFarmService.pdb
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\bin\WebFarmService.dll.config
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\bin\WebFarmService.dll
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\bin\WebFarmService.pdb
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\obj\Debug\WebFarmService.csproj.AssemblyReference.cache
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\obj\Debug\WebFarmService.csproj.CoreCompileInputs.cache
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\obj\Debug\WebFarmService.dll
+C:\Users\micfu\source\repos\Anele-Michael-101\Fantastic4\WebFarmService\obj\Debug\WebFarmService.pdb

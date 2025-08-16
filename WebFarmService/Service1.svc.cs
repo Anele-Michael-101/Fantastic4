@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using HashPass;
 
 
 namespace WebFarmService
@@ -16,15 +17,44 @@ namespace WebFarmService
        WebfarmDataClassDataContext db = new WebfarmDataClassDataContext();
         public int Login(string email, string password)
         {
+            //Search Algorithm to find the user.
             var User = (from u in db.USERs
                       where u.U_Email.Equals(email) && u.U_Password.Equals(password)
                       select u).FirstOrDefault();
-            return User.U_ID;
-        }
 
+            int ID = User.U_ID;
+            if (ID > 0) {
+                return ID;
+            }else {
+                return -1; 
+            }
+        }
+        //Create a user and add them to the database
         public bool Register(string Name, string Surname, string email, string password, string contact)
         {
-            throw new NotImplementedException();
+            
+            var User = (from u in db.USERs
+                        where u.U_Email.Equals(email) && u.U_Password.Equals(password)
+                        select u).FirstOrDefault();
+            if (User != null)
+            {
+                return false;
+            }
+            else
+            {
+                //Create User
+                USER recruit = new USER()
+                {
+                    U_NAN = Name,
+                    U_Surname = Surname,
+                    U_Email = email,
+                    U_ContactNo = contact,
+                    U_Password = password
+                };
+                db.USERs.InsertOnSubmit(recruit);
+                db.SubmitChanges();
+                return true;
+            }
         }
     }
 }
