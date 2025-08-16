@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebFarmService",
+    "\\WebFarmService\\App_Data"
   ],
-  "SelectedNode": "\\WebFarmService.sln",
+  "SelectedNode": "\\WebFarmService\\IService1.cs",
   "PreviewInSolutionExplorer": false
 }

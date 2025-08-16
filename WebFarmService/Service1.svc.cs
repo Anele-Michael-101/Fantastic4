@@ -42,7 +42,7 @@ namespace WebFarmService
             }
             else
             {
-                //Create User
+                //Create User if the user is non  existant
                 USER recruit = new USER()
                 {
                     U_NAN = Name,
